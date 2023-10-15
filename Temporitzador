@@ -1,0 +1,19 @@
+from time import sleep
+
+def Alerta(seg):
+    missatge = ""
+    
+    if (seg != 0):
+        missatge += "Queden " + str(seg) + " segons"
+    else: 
+        missatge += "S'ha acabat el temps"
+        
+    print(missatge)
+    
+    return 0 
+
+segons = int(input("Introdueix els segons del compte enrrere: "))
+
+for t in range (segons,-1,-1):
+    Alerta(t)
+    sleep(1)
