@@ -1,0 +1,63 @@
+num = int(input("Quants elements ha de tenir la llista inicial: "))
+
+suma = 0
+
+llista = []
+
+while suma < num:
+    suma += 1
+    valor = int(input("Introdueix un valor a la llista: "))
+    llista.append(valor)
+opcio = 0
+while opcio != 6:
+    print("1.- Afegir element al final de la llista")
+    print("2.- Afegir element en una posició de la llista")
+    print("3.- Eliminar el darrer element de la llista")
+    print("4.- Eliminar l'element d'una posició de la llista")
+    print("5.- Eliminar la primera aparició d'un valor a la llista")
+    print("6.- Sortir")
+    
+    opcio = int(input("Selecciona una de les opcions: "))
+    if (opcio == 1):
+        element1 = int(input("Quin element vols afegir: "))
+        llista.append(element1)
+        print(llista)
+            
+    elif (opcio == 2):
+        element2 = int(input("Quin element vols afegir: "))
+        posicio = int(input("En quina posició vols afegir l'element: "))
+        if posicio<len(llista):
+            llista.insert(posicio,element2)
+            print(llista)
+        else:
+            print("Error: Posició no vàlida")
+    elif (opcio == 3):
+        if len(llista) == 0:
+            print("Error: Llista buida")
+        else:
+            llista.pop()
+            print(llista)
+        
+    elif (opcio == 4):
+        posicio = int(input("Quina posició vols eliminar: "))
+        if posicio<len(llista):
+            llista.pop(posicio)
+            print(llista)
+        else:
+            print("Error: Posició no vàlida")
+        
+    elif (opcio == 5):
+        element5 = int(input("Quin element vols eliminar: "))
+        if element5 in llista:
+            llista.remove(element5)
+            print(llista)
+        else:
+            print("Error: Valor inexistent a la llista")
+    
+    elif (opcio == 6):
+            print(llista)
+
+    else:
+        print("Error: Opció no disponible")
+        
+print(llista)

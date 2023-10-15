@@ -1,0 +1,21 @@
+frase = str(input("Escriu la teva frase: "))
+
+Aa = 0
+Ee = 0
+Ii = 0
+Oo = 0
+Uu = 0
+
+for k in range (len(frase)):
+    if frase[k] == "a" or frase[k] == "A":
+        Aa += 1
+    elif frase[k] == "e" or frase[k] == "E":
+        Ee += 1
+    elif frase[k] == "i" or frase[k] == "I":
+        Ii += 1
+    elif frase[k] == "o" or frase[k] == "O":
+        Oo += 1
+    elif frase[k] == "u" or frase[k] == "U":
+        Uu += 1
+
+print("A:", Aa, "- ""E:", Ee, "- ""I:", Ii, "- ""O:", Oo, "- ""U:", Uu)

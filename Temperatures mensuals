@@ -1,0 +1,40 @@
+NUM_MESOS = 12
+
+llista = []
+
+for i in range (NUM_MESOS):
+    temp = int(input("Quina temperatura ha fet en aquest mes "+str(i+1)+": "))
+    llista.append(temp)
+
+maxim = llista[0]
+pos_maxim =0
+minim = llista[0]
+pos_minim = 0
+
+for i in range(NUM_MESOS):
+    if llista[i] > maxim:
+        maxim = llista[i]
+        pos_maxim = i
+    elif llista[i] < minim:
+        minim = llista[i]
+        pos_minim = i 
+
+print("Mes amb temperatura mínima:", pos_minim+1)
+print("Mes amb temperatura màxima:", pos_maxim+1)
+
+temptotal=0
+for i in range(NUM_MESOS):
+    temptotal += llista[i]
+    mitjana = (temptotal/12)
+
+print("Temperatura mitjana:", mitjana)
+
+for i in range(NUM_MESOS):
+    if llista[i] > mitjana:
+        print("El mes", i+1,  "ha tingut temperatura superior a la mitjana anual")
+        
+    elif llista[i] < mitjana:
+        print("El mes", i+1,  "ha tingut temperatura inferior a la mitjana anual")
+    
+    else:
+        print("El mes", i+1,  "ha tingut temperatura igual a la mitjana anual")

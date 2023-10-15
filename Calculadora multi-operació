@@ -1,0 +1,39 @@
+altres_operands = "S"
+while altres_operands =="S":
+    x = float(input("Introdueix el primer valor: "))
+    y = float(input("Introdueix el segon valor: "))
+    
+    opcio=0
+    while (opcio != 5):
+        print("Menú")
+        print("1.- Suma")
+        print("2.- Resta")
+        print("3.- Producte")
+        print("4.- Divisió")
+        print("5.- Sortir")
+        
+        opcio = int(input("Selecciona una de les opcions: "))
+        
+        if opcio == 5:
+            altres_operands = input("Vols canviar d'operands? :")
+        elif opcio in [1, 2, 3, 4]:
+            if opcio == 1:
+                res = x + y
+                operador = "+"
+            elif opcio == 2 :
+                res = x - y
+                operador = "-"
+            elif opcio == 3 :
+                res = x * y
+                operador = "x"
+            elif opcio == 4 :
+                if (y!=0):
+                    res = x / y
+                    operador = ":"
+                else:
+                    print("Error: Divisió per zero")
+                    res = None
+            if res != None:
+                print(x, operador, y, "=", res)
+        else:
+            print("Error: Opció no vàlida")

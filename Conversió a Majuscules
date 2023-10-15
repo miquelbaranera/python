@@ -1,0 +1,11 @@
+frase = str(input("Introdueix una frase: "))
+frasefinal=""
+
+for i in range (len(frase)):
+    if (ord(frase[i]) >=97) and (ord(frase[i]) <= 122):
+        codi_ascii = ord(frase[i]) - 32
+        majuscula = chr(codi_ascii)
+        frasefinal += majuscula
+    else:
+        frasefinal += frase[i]
+print(frasefinal)
