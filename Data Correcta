@@ -1,0 +1,35 @@
+data = str(input("introdueix una data DD/MM/AAAA: "))
+
+DD = int(data [0:2])
+MM = int(data [3:5])
+AAAA = int(data[6:10])
+#Llista de mesos amb 31 dies:
+llistamesos=[1,3,5,7,8,10,12]
+
+if(MM in llistamesos):
+    if DD>31 or DD<1:
+        print ("Error: Dia incorrecte")
+    else:
+        print("Data correcta")
+
+elif (MM == 4) or (MM == 6) or (MM == 9) or (MM == 11):
+    if DD>30 or DD<1:
+        print ("Error: Dia incorrecte")
+    else:
+        print("Data correcta")
+
+elif (MM == 2):
+    if ((AAAA%4==0 and AAAA%100!=0) or AAAA%400==0):
+        if (DD <= 29):
+            print("Data correcta")
+    elif(DD <=28):
+        print("Data correcta")
+    else:
+        print("Error: Dia incorrecte")
+
+elif DD>31 or DD<1:
+    print("Error: Dia incorrecte")
+elif MM>12 or MM<1:
+    print("Error: Mes incorrecte")
+elif AAAA<0:
+    print("Error: Any incorrecte")
