@@ -1,0 +1,47 @@
+from math import copysign
+from time import sleep
+
+#Funció dues xifres, per que per les hores més petites de 10, ens les retorni amb un 0 davant
+def duesxifres(num):
+    out = ""
+    if num<10:
+        out += "0"
+    out += str(num)
+    
+    return out
+
+#Inputs
+
+temps = input("Introdueix l'hora en format hh:mm:ss: ")
+tope = int(input("Durant quants segons desitjes que funcioni el programa: "))
+cops = 0
+
+hh = int(temps [0:2])
+mm = int(temps [3:5])
+ss = int(temps [6:8])
+
+#Procés
+while (cops < tope):
+    cops += 1
+    sleep(1)
+    ss= ss+1
+
+    if (ss == 60):
+        ss=0
+        mm = mm+1
+
+    if (mm==60):
+        mm=0
+        hh=hh+1
+        
+    if (hh==24):
+        hh=0
+
+    #Outputs
+    sortida = ""
+
+    sortida += duesxifres(hh) + ":"
+    sortida += duesxifres(mm) + ":"
+    sortida += duesxifres(ss)
+
+    print(sortida)
