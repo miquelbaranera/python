@@ -1,0 +1,22 @@
+num = int(input("Introdueix: "))
+acu = 1
+suma = 0
+minim = num
+maxim = num
+
+
+if(num == 0):
+    print("Error: La seqüència és buida. No es pot calcular")
+
+while(num != 0):
+    suma += num
+    mit = ((suma)/(acu))
+    num = int(input("Introdueix: "))
+    acu += 1
+    
+    if num > maxim:
+        maxim = num
+    elif num < minim and num != 0: 
+        minim = num
+    
+print("Mitjana :", mit," - Màxim: " + str(maxim)," - Mínim: " + str(minim))
