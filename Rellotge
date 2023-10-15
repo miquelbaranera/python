@@ -1,4 +1,3 @@
-from math import copysign
 from time import sleep
 
 #Funció dues xifres, per que per les hores més petites de 10, ens les retorni amb un 0 davant
