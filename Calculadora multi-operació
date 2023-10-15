@@ -1,5 +1,5 @@
-altres_operands = "S"
-while altres_operands =="S":
+altres_operands = "Si"
+while altres_operands =="S" or altres_operands=="si" or altres_operands=="SI":
     x = float(input("Introdueix el primer valor: "))
     y = float(input("Introdueix el segon valor: "))
     
