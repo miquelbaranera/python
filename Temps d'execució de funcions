@@ -1,0 +1,25 @@
+from time import time
+
+
+def factorial(num):
+    fact = 1
+    for n in range (num,1,-1):
+        fact *= n
+    return fact
+    
+def sumatori(num):
+    sum = 0
+    for n in range (num,0,-1):
+        sum += n
+    return sum
+    
+    return resultat
+
+def Timer(fnc,arg):
+    t0 = time()
+    fnc(arg)
+    t1 = time()
+    return t1-t0
+
+print("Temps execució: ", Timer(factorial,100))
+print("Temps execució: ", Timer(sumatori,100))

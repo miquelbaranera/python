@@ -1,0 +1,29 @@
+#Conceptes inicials
+paraula = str(input("Introdueix una paraula: "))
+oculta = "_" * len(paraula)
+intents = int(input("Quin vols que sigui el límit d'intents: "))
+
+print("La paraula desconeguda té", len(paraula), "lletres:")
+print(oculta)
+
+
+t = 0
+llista_intents =[]
+
+#Procés
+for t in range(intents):
+    intent = input("Introdueix una lletra: ")
+    llista_intents.append(intent)
+    resposta = ""
+    for i in range(len(paraula)):
+        if paraula[i] in llista_intents:
+            resposta += paraula[i]
+        else:
+            resposta += "_"
+    t += 1
+    print(resposta, 10-t, "intents restants")
+    if (resposta == paraula):
+        print("Correcte")
+        break
+if resposta != paraula:
+    print("Has perdut, la paraula era:", paraula)

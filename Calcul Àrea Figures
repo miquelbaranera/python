@@ -1,0 +1,61 @@
+def menu_seleccio():
+    print("----- MENÚ -----\n")
+    print("1.-Àrea quadrat")
+    print("2.-Àrea rectangle")
+    print("3.-Àrea triangle")
+    print("4.-Sortir\n")
+    print("Tria una de les opcions: ")
+
+def area_quadrat(costat):
+     if costat>0:
+          area = costat*costat
+          return 0, area
+     else:
+          return 1,None
+def area_rectangle(base,altura):
+     if (base>0)and(altura>0):
+          area=base*altura
+          return 0,area
+     else:
+          return 1,None
+def area_triangle(base,altura):
+     if (base>0)and(altura>0):
+          area=base*altura/2
+          return 0,area
+     else:
+          return 1,None
+
+menu_seleccio()
+resposta = int(input(""))
+
+while resposta != 4:
+    if resposta == 1:
+
+        costat = int(input("Quina llargada fa el costat del quadrat: "))
+        num, area = area_quadrat(costat)
+        if num == 0:
+            print("Àrea:", float(area))
+        elif num == 1:
+            print("Error: Dimensions incorrectes")
+    
+    elif resposta == 2: 
+        base = int(input("Quina llargada fa la base del rectangle: "))
+        altura = int(input("Quina llargada fa l'altura del rectangle: "))
+        num, area = area_rectangle(base,altura)
+        if num == 0:
+            print("Àrea:", float(area))
+        elif num == 1:
+            print("Error: Dimensions incorrectes")
+    
+    elif resposta == 3:
+        base = int(input("Quina llargada fa la base del triangle: "))
+        altura = int(input("Quina llargada fa l'altura del triangle: "))
+        num, area = area_triangle(base,altura)
+        if num == 0:
+            print("Àrea:", float(area))
+        elif num == 1:
+            print("Error: Dimensions incorrectes")
+    else:
+        print("Error: opció incorrecta")
+    menu_seleccio()
+    resposta = int(input(""))
