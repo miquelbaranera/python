@@ -1,2 +1,2 @@
-# phyton
-En aquest repositori, hi ha alguns dels codis de Phyton que ms útils trobo.
+# python
+En aquest repositori, hi ha alguns dels codis de Python que ms útils trobo.
