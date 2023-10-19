@@ -1,0 +1,23 @@
+def Fibonacci(num):
+    while num<0:
+        print("Error: el nombre no pot ser negatiu")
+        num = int(input("Introdueix el valor de la n: "))
+    
+    if num == 0:
+        k = 0
+    
+    elif num == 1:
+        k = 1
+    
+    elif num >= 2:
+        k = 0
+        llista = [0,1]
+        for i in range (2,num+1):
+            k = llista[i-1]+llista[i-2]
+            llista.append(k)
+    return num, k
+    
+num = int(input("Introdueix el valor de la n: "))
+num, k = Fibonacci(num)
+
+print ("El terme", num, "de la sèrie de Fibonacci és", k)

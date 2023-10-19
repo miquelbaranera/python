@@ -1,0 +1,17 @@
+from math import sqrt
+
+def equacio(a,b,c):
+    aux = b**2 - 4 * a * c
+    if aux < 0:
+        num_arrels = 0
+        arrel_1 = None
+        arrel_2 = None
+    elif aux == 0:
+        num_arrels = 1
+        arrel_1 = -b/ (2 * a)
+        arrel_2 = None
+    else:
+        arrel_1 = (-b + sqrt(aux))/(2*a)
+        arrel_2 = (-b - sqrt(aux))/(2*a)
+        num_arrels = 2
+    return num_arrels, arrel_1, arrel_2

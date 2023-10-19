@@ -1,0 +1,27 @@
+def LlegirLlista(n_elements):
+    llista1 = []
+    llista2 = []
+    
+    for i in range (n_elements):
+        llista1.append(int(input("Introdueix l'element de la llista 1: ")))
+    for i in range (n_elements):
+        llista2.append(int(input("Introdueix l'element de la llista 2: ")))
+    
+    return llista1, llista2
+
+
+def SumarLlistes(llista1,llista2): 
+    llista_total = []
+    for i in range(n_elements):
+        llista_total.append(llista1[i] + llista2[i])
+    return llista_total
+
+
+
+n_elements= int(input("Quants elements s'han de llegir: "))
+
+llista1,llista2 = LlegirLlista(n_elements)
+
+resultat = SumarLlistes(llista1,llista2)
+
+print(resultat)

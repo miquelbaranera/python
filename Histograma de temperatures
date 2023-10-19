@@ -1,0 +1,17 @@
+from llistes import LlegirLlista, InicialitzarLlista, MitjanaLlista, MaximLlista, MinimLlista, MinimLlistaNoZero
+
+
+N_DIES = 14
+N_TEMP = 61
+
+print("Introdueix la temperatura")
+t = LlegirLlista(N_DIES)
+
+his = InicialitzarLlista(N_TEMP,0)
+for i in range(len(t)):
+    indexhis = t[i]+10
+    his[indexhis]+=1
+print(his)
+
+print("Temperatura més repetida: ", MaximLlista(his)-10)
+print("Temperatura menys repetida: ", MinimLlistaNoZero(his)-10)

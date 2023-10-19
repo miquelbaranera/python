@@ -1,0 +1,20 @@
+def LlegirLlista(n_elements):
+    llista = []
+    for i in range (n_elements):
+        llista.append(int(input("Introdueix un valor a la llista: ")))
+    return llista
+
+def OrdenarLlista(llista):
+    for i in range(len(llista)):
+        for j in range(len(llista)-1):
+            if llista[j]>llista[j+1]:
+                llista[j],llista[j+1] = llista[j+1], llista[j]
+    return llista
+            
+MIDA = 8
+L = LlegirLlista(MIDA)
+print(L)
+
+l= OrdenarLlista(L)
+
+print("Llista ordenada:", l)
